@@ -56,13 +56,18 @@ function playGame(rounds) {
         console.log("Current Score - You: " + humanScore + " Computer: " + computerScore);
     }
 
+    let message = "";
+
     if (humanScore > computerScore) {
-        console.log("Congratulations! You won the game!");
+        message = "Congratulations! You won the game with a score of " + humanScore + " to " + computerScore + "!";
     } else if (computerScore > humanScore) {
-        console.log("Sorry! The computer won the game!");
+        message = "Sorry! The computer won the game with a score of " + computerScore + " to " + humanScore + "!";
     } else {
-        console.log("It's a tie game!");
+        message = "It's a tie game!";
     }
+    
+    alert(message);
+    console.log(message);
 }
 
 playGame(askHowManyRounds());
